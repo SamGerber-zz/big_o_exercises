@@ -48,11 +48,3 @@ def bonus_anagram(s1, s2)
     v == 0
   end
 end
-
-def dumb_two_sum?(arr, target_sum) # O(n^2)
-  arr.each_with_index do |el, i|
-    arr.drop(i+1).each { |el2| return true if el + el2 == target_sum }
-    # return true if arr.drop(i+1).any? { |el2| ek + el2 == target_sum }
-  end
-  false
-end
